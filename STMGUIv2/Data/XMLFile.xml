@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<stm>
+  <states>
+    <state name="Program4"/>
+    <state name="Program5"/>
+    <state name="1200RPM"/>
+    <state name="Program1"/>
+    <state name="Program2"/>
+    <state name="60deg_Water"/>
+    <state name="Program3"/>
+    <state name="1600RPM"/>
+    <state name="40deg_Water"/>
+    <state name="Idle"/>
+    <state name="FINISHED"/>
+    <state name="50deg_Water"/>
+    <state name="Display_Hour"/>
+    <state name="1400RPM"/>
+  </states>
+  <transitions>
+    <transition cond="cycles  eq  72000" dest="FINISHED" name="t704" src="1200RPM"/>
+    <transition cond="button  eq  5" dest="1600RPM" name="t419" src="60deg_Water"/>
+    <transition cond="cycles  eq  96000" dest="FINISHED" name="t307" src="1600RPM"/>
+    <transition cond="run  eq  0" dest="Display_Hour" name="t559" src="Idle"/>
+    <transition cond="button  eq  1" dest="1200RPM" name="t831" src="40deg_Water"/>
+    <transition cond="finish  eq  1" dest="Display_Hour" name="t654" src="FINISHED"/>
+    <transition cond="button  eq  2" dest="1400RPM" name="t175" src="40deg_Water"/>
+    <transition cond="run  eq  1" dest="50deg_Water" name="t769" src="Program3"/>
+    <transition cond="run  eq  1" dest="60deg_Water" name="t219" src="Program5"/>
+    <transition cond="button  eq  3" dest="1400RPM" name="t251" src="50deg_Water"/>
+    <transition cond="button  eq  5  and  run  eq  1" dest="Program5" name="t696" src="Idle"/>
+    <transition cond="button  eq  4  and  run  eq  1" dest="Program4" name="t838" src="Idle"/>
+    <transition cond="button  eq  3  and  run  eq  1" dest="Program3" name="t654" src="Idle"/>
+    <transition cond="button  eq  2  and  run  eq  1" dest="Program2" name="t160" src="Idle"/>
+    <transition cond="button  eq  1  and  run  eq  1" dest="Program1" name="t895" src="Idle"/>
+    <transition cond="run  eq  0" dest="Idle" name="t477" src="Display_Hour"/>
+    <transition cond="cycles  eq  84000" dest="FINISHED" name="t522" src="1400RPM"/>
+    <transition cond="run  eq  1" dest="40deg_Water" name="t249" src="Program1"/>
+    <transition cond="run  eq  1" dest="60deg_Water" name="t462" src="Program4"/>
+    <transition cond="button  eq 4  and  x eq 1" dest="1400RPM" name="t660" src="60deg_Water"/>
+    <transition cond="run  eq  1" dest="40deg_Water" name="t490" src="Program2"/>
+  </transitions>
+</stm>

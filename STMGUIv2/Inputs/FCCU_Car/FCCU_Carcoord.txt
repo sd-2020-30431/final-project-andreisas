@@ -1,0 +1,7 @@
+Prestart 272x124
+Startup 279x301
+Running 575x491
+Heatup 345x590
+Shutdown 543x105
+Error 551x327
+Pre-shutdown 935x191

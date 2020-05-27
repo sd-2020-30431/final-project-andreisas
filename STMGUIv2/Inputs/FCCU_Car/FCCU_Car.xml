@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<stm>
+  <states>
+    <state name="Prestart"/>
+    <state name="Startup"/>
+    <state name="Running"/>
+    <state name="Heatup"/>
+    <state name="Shutdown"/>
+    <state name="Error"/>
+    <state name="Pre-shutdown"/>
+  </states>
+  <transitions>
+    <transition cond="err  eq  1" dest="Error" name="ErrCheck" src="Running"/>
+    <transition cond="err  eq  0" dest="Shutdown" name="ErrCheck" src="Pre-shutdown"/>
+    <transition cond="type  eq  2" dest="Pre-shutdown" name="SoftError" src="Error"/>
+    <transition cond="key_inside  eq  1" dest="Prestart" name="KeyCheck" src="Shutdown"/>
+    <transition cond="temp  gt  60" dest="Running" name="TempCheck2" src="Heatup"/>
+    <transition cond="sys_working  eq  1" dest="Startup" name="SystemCheck" src="Prestart"/>
+    <transition cond="temp  lt  35" dest="Heatup" name="TempCheck" src="Startup"/>
+    <transition cond="err  eq  0" dest="Pre-shutdown" name="ErrCheck" src="Running"/>
+    <transition cond="temp  gt  60" dest="Running" name="TempCheck" src="Startup"/>
+    <transition cond="type  eq  1" dest="Shutdown" name="HardError" src="Error"/>
+  </transitions>
+</stm>

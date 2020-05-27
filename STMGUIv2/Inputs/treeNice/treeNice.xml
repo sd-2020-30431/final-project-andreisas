@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<stm>
+  <states>
+    <state name="s9"/>
+    <state name="s8"/>
+    <state name="s3"/>
+    <state name="s2"/>
+    <state name="s1"/>
+    <state name="s10"/>
+    <state name="s7"/>
+    <state name="s6"/>
+    <state name="s5"/>
+    <state name="s4"/>
+    <state name="s11"/>
+  </states>
+  <transitions>
+    <transition cond="i5 eq 1" dest="s9" name="" src="s6"/>
+    <transition cond="i6 eq 1 " dest="s11" name="" src="s9"/>
+    <transition cond="i7 eq 1" dest="s1" name="" src="s11"/>
+    <transition cond="i6 eq 1" dest="s10" name="" src="s8"/>
+    <transition cond="i5 eq 1" dest="s8" name="" src="s5"/>
+    <transition cond="i1 eq 1" dest="s2" name="" src="s1"/>
+    <transition cond="i1 eq 2" dest="s3" name="" src="s1"/>
+    <transition cond="i2 eq 3" dest="s6" name="" src="s3"/>
+    <transition cond="i2 eq 4" dest="s7" name="" src="s3"/>
+    <transition cond="i5 eq 1" dest="s9" name="" src="s7"/>
+    <transition cond="i7 eq 1" dest="s1" name="" src="s10"/>
+    <transition cond="i5 eq 1" dest="s8" name="" src="s4"/>
+    <transition cond="i2 eq 2" dest="s5" name="" src="s2"/>
+    <transition cond="i2 eq 1" dest="s4" name="" src="s2"/>
+  </transitions>
+</stm>

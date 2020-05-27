@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<stm>
+  <states>
+    <state name="s9"/>
+    <state name="s8"/>
+    <state name="s7"/>
+    <state name="s3"/>
+    <state name="s2"/>
+    <state name="s1"/>
+    <state name="s10"/>
+    <state name="s17"/>
+    <state name="s16"/>
+    <state name="s15"/>
+    <state name="s6"/>
+    <state name="s13"/>
+    <state name="s18"/>
+    <state name="s5"/>
+    <state name="s12"/>
+    <state name="s19"/>
+    <state name="s4"/>
+    <state name="s11"/>
+    <state name="s14"/>
+  </states>
+  <transitions>
+    <transition cond="i3 eq 6" dest="s13" name="" src="s6"/>
+    <transition cond="i3 eq 5" dest="s12" name="" src="s6"/>
+    <transition cond="i1 eq 1" dest="s2" name="" src="s1"/>
+    <transition cond="i1 eq 2" dest="s3" name="" src="s1"/>
+    <transition cond="i2 eq 4" dest="s7" name="" src="s3"/>
+    <transition cond="i4 eq 1" dest="s16" name="" src="s11"/>
+    <transition cond="i5 eq 1" dest="s18" name="" src="s16"/>
+    <transition cond="i6 eq 1" dest="s1" name="" src="s18"/>
+    <transition cond="i2 eq 3" dest="s6" name="" src="s3"/>
+    <transition cond="i5 eq 1" dest="s19" name="" src="s17"/>
+    <transition cond="i4 eq 1" dest="s16" name="" src="s10"/>
+    <transition cond="i3 eq 2" dest="s9" name="" src="s4"/>
+    <transition cond="i3 eq 1" dest="s8" name="" src="s4"/>
+    <transition cond="i4 eq 1" dest="s16" name="" src="s9"/>
+    <transition cond="i2 eq 1" dest="s4" name="" src="s2"/>
+    <transition cond="i4 eq 1" dest="s17" name="" src="s15"/>
+    <transition cond="i4 eq 1" dest="s16" name="" src="s8"/>
+    <transition cond="i3 eq 3" dest="s10" name="" src="s5"/>
+    <transition cond="i3 eq 4" dest="s11" name="" src="s5"/>
+    <transition cond="i4 eq 1" dest="s17" name="" src="s12"/>
+    <transition cond="i6 eq 1" dest="s1" name="" src="s19"/>
+    <transition cond="i4 eq 1" dest="s17" name="" src="s13"/>
+    <transition cond="i2 eq 2" dest="s5" name="" src="s2"/>
+    <transition cond="i4 eq 1" dest="s17" name="" src="s14"/>
+    <transition cond="i3 eq 7" dest="s14" name="" src="s7"/>
+    <transition cond="i3 eq 8" dest="s15" name="" src="s7"/>
+  </transitions>
+</stm>
